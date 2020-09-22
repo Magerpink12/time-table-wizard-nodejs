@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="warning.css">
+    <link rel="stylesheet" href="stylecopy.css">
+    <script src="jquery-3.5.1.js"></script>
+    
+    <style>
+
+
+        @media screen and (max-width: 780px){
+            .profile{
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Rep Dashboard</title>
+    <script>
+        
+    </script>
+</head>
+<body>
+    {{!-- <div class="header">
+        <img src="img/task2.png" alt="LOGO"><span style="letter-spacing: 4px; font-weight: 700; padding: 9px;">MAGERPINK</span>
+        <button style="float: right; padding:5px; margin:15px;width:100px" onclick=logout() ontouchstart="" >Log Out</button>
+    </div> --}}
+    {{>header}}
+            
+    <div class="container">
+
+        <div class="content x">
+            <img src="img/task1.png" alt="">
+            <div class="user-infor">
+                <h2>Welcome to TTW Dashboard</h2>
+                <hr>
+                <table class="add">
+                    <tr>
+                        <td style="text-align: center;" colspan="2"><h2>Profile</h2></td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><h3 id="name">*********</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Faculty:</td>
+                        <td><span id="faculty">********</span></td>
+                    </tr>
+                    <tr>
+                        <td>Department:</td>
+                        <td><span id="department">********</span></td>
+                    </tr>
+                    <tr>
+                        <td>Level:</td>
+                        <td><span id="level">********</span></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td><span id="phone">********</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button id="update" >Edit</button></td>
+                    </tr>
+                </table>
+                 <div class="user-update add">
+                     <input type="text" placeholder="Name" name="name" id="">
+                     <input type="tel" placeholder="Phone Number" name="phone" id="">
+                     <input type="text" placeholder="Nick Name" name="nick" id="">
+                     <select name="level">
+                         <option value="">Change Level</option>
+                         <option value="100">100L</option>
+                         <option value="200">200L</option>
+                         <option value="300">300L</option>
+                         <option value="400">400L</option>
+                         <option value="500">500L</option>
+                     </select>
+                     <input type="text" name="password" placeholder="password" id="">
+                     <button id="submit-up">Submit</button>
+                </div>
+            </div>
+           
+            
+        </div>
+
+        
+        <div class="content">
+            <h4 class="head">Time Table</h4>
+                <hr>
+            <div class="table">
+                <table id="table">
+                    <tr style="">
+                        <th>TIME / DAY</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THUR</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                        <th>SUN</th>
+                    </tr>
+                    <tr>
+                        <td>8:00AM - 9:00AM</td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>9:00AM - 10:00AM</td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>10:00AM - 11:00AM</td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>11:00AM - 12:00PM</td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        
+                     
+                    </tr>
+                     <tr>
+                        <td>12:00AM - 1:00PM</td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        
+                     
+                    </tr>
+                    <tr>
+                        <td>1:00PM - 2:00PM</td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+
+                    </tr>
+                    <tr>
+                        <td>2:00PM - 3:00PM</td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                    </tr>
+                                        </tr>
+                    <tr>
+                        <td>3:00PM - 4:00PM</td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                        <td><div class="data">
+                            
+                        </div></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-task">
+                <div style="display:flex; align-items: center;">    
+                    <img src="img/task2.png" alt="">
+                    <h4 class="head">Add Task</h4>
+                </div>
+                    <hr>
+                <div class="add">
+                    <div class=""> 
+                        <div class="logo"><img src="img/12.png" alt=""> <input type="text" placeholder="Course Code" name="course" id="course"><p id="error">*</p></div><br>
+                        <div class="logo"><img src="img/16.png" alt=""> <input type="text" placeholder="Course Title" name="" id="title"></div><br>
+                        <div class="logo"><img src="img/17.png" alt=""><input type="text" placeholder="Course Lecturer" name="" id="instructor"></div><br>                      
+                        {{!-- <div class="logo"><img src="img/15.png" alt=""><input type="text" placeholder="Day" name="" id=""></div><br> --}}
+
+                        <div class="logo"><img src="img/15.png" alt=""><select name="" id="day">
+                            <option value="">--</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select><p id="error">*</p></div><br>
+
+                        {{!-- <div class="logo"><img src="img/14.png" alt=""><input type="time" placeholder="Time" min="08:00" max="15:00"  name="" id="time"></div><br> --}}
+                        <div class="logo"><img src="img/14.png" alt=""> <select name="" id="time">
+                            <option value="">--:--</option>
+                            <option value="08:00">08:00AM - 09:00AM</option>
+                            <option value="09:00">09:00AM - 10:00AM</option>
+                            <option value="10:00">10:00AM - 11:00AM</option>
+                            <option value="11:00">11:00AM - 12:00AM</option>
+                            <option value="12:00">12:00PM - 01:00PM</option>
+                            <option value="13:00">01:00PM - 02:00PM</option>
+                            <option value="14:00">02:00PM - 03:00PM</option>
+                            <option value="15:00">03:00PM - 04:00PM</option>
+                        </select><p id="error">*</p></div><br>
+                        <div class="logo"><img src="img/13.png" alt=""><input type="text" placeholder="Venue" name="" id="venue"></div>
+                        <button id="add-btn" style="margin: 9px; width: 50%;">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+       
+
+        </div>
+         <!-- **************DATA CLICK**************** -->
+         <div class="data-model">
+             <div class="data-infor"> 
+                <h1 id="cancel"> &times</h1>
+                <div class="data-infor-data">  
+                    <div class="information">
+                        <h3> <span id="c">********</span></h3>
+                        <h5>Title: <span id="ti">********</span></h5>
+                        <h5>By: <span id="i">*******</span></h5>
+                        <h5>Day: <span id="d">********</span></h5>
+                        <h5>Venue: <span id="v">********</span></h5>
+                        <h5>Time: <span id="t">********</span></h5>
+                        <h5>Updated At: <span id="u">********</span></h5>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <button class="update"tyle="margin: 5px 15px" onclick=window.location.href = '/update' >Update</button>
+                        <button class="remove" style="margin: 5px 15px">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="load" style="display: ;"> 
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+        <div class="warn-pop-up">
+        <span class="warn-message">! Something Goes here ...........</span>
+        <span class="cancel-warn">&times;</span>
+    </div>
+
+        <script src="main.js"></script>
+        
+
+</body>
+</html>
